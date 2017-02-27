@@ -184,7 +184,18 @@ function load_html5_player(liveUrl) {
     });
 
     $('.chat-ctnr-hider-ctnr').click(function () {
-         window.danmaku.resize();
+        window.danmaku.resize();
+    });
+    
+    var time = 0;
+
+    $('#html5-live-element').mousemove(function hide_controller() {
+        
+        $('#video-controller').removeClass('video-hide-controller');
+        clearTimeout(time)
+        time = setTimeout(function () {
+            $('#video-controller').addClass('video-hide-controller');
+        }, 3500);
     });
 
     if (window.danmaku != null) {
