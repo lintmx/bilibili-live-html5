@@ -1,0 +1,98 @@
+#video-controller {
+    left: 0px;
+    right: 0px;
+    height: 98px;
+    position: absolute;
+    bottom: 0px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==) repeat-x bottom;
+}
+
+#video-controller .player-icon {
+    bottom: 0px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.8;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}
+
+#video-controller .player-icon:hover {
+    opacity: 1;
+}
+
+.player-icons {
+    height: 34px;
+    bottom: 0px;
+    position: absolute;
+}
+
+div.player-icons.player-icon-left {
+    left: 10px;
+}
+
+div.player-icons.player-icon-right {
+    right: 10px;
+}
+
+.player-volume-warp {
+    position: relative;
+    display: inline-block;
+    cursor: pointer!important;
+    height: 100%;
+}
+
+.player-volume-bar-warp {
+    display: inline-block;
+    margin: 0 5px 0 2px;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.player-volume-warp:hover .player-volume-bar {
+    width: 43px !important;
+}
+
+.player-volume-bar-warp .player-volume-bar {
+    position: relative;
+    top: 8px;
+    width: 0px;
+    height: 3px;
+    background: #aaa;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.player-volume-bar-inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 20%; */
+    height: 100%;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    will-change: width;
+}
+
+span.player-thumb {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-top: -4px;
+    margin-right: -10px;
+    height: 11px;
+    width: 11px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer!important;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.player-setting {
+    display: inline-block;
+}

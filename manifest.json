@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "哔哩哔哩直播 html5 播放器",
+  "description": "本扩展基于 flv.js ,用于将直播的 Flash 播放器替换为 Html5 播放器。",
+  "version": "0.0.1",
+
+  "permissions": [
+      "tabs",
+      "*://live.bilibili.com/*",
+      "*://*/*"
+  ],
+
+  "web_accessible_resources": [
+      "src/danmaku.min.js",
+      "src/flv.min.js",
+      "src/live.js",
+      "src/run.js",
+      "src/danmaku-player.css"
+  ],
+
+  "icons": {
+      "256": "icon.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+      {
+          "matches": [
+              "http://live.bilibili.com/*"
+          ],
+          "js": [
+              "src/run.js"
+          ],
+          "run_at": "document_end"
+      }
+  ]
+}
