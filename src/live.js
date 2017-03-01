@@ -1,6 +1,4 @@
 var room_id = ROOMID;
-window.danmaku = new Danmaku();
-window.danmaku_server = null;
 
 function get_live_status(room_id) {
     $.ajax({
@@ -442,7 +440,13 @@ function get_svg(type) {
 }
 
 if (room_id != null) {
-    get_live_status(room_id);
+    if (window.location.protocol == "https:") {
+        window.location.protocol = "http:";
+    } else {
+        window.danmaku = new Danmaku();
+        window.danmaku_server = null;
+        get_live_status(room_id);
+    }
 } else {
     console.log('bilibili-live-player: Get Room Id failed.');
 }

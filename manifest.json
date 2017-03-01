@@ -31,7 +31,7 @@
   "content_scripts": [
       {
           "matches": [
-              "http://live.bilibili.com/*"
+              "*://live.bilibili.com/*"
           ],
           "js": [
               "src/run.js"
