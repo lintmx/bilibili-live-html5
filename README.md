@@ -8,6 +8,8 @@
 
 [flv.js](https://github.com/Bilibili/flv.js)
 
+[DouyuHTML5Player](https://github.com/spacemeowx2/DouyuHTML5Player)
+
 [Danmaku](https://github.com/weizhenye/Danmaku)
 
 [bilibili 直播 HTML5 播放器](https://greasyfork.org/zh-CN/scripts/27239-bilibili-%E7%9B%B4%E6%92%AD-html5-%E6%92%AD%E6%94%BE%E5%99%A8)
