@@ -184,16 +184,16 @@ function load_html5_player(liveUrl) {
     $('.chat-ctnr-hider-ctnr').click(function () {
         window.danmaku.resize();
     });
-    
+
     var time = 0;
 
     $('#html5-live-element').mousemove(function hide_controller() {
-        
+
         $('#video-controller').removeClass('video-hide-controller');
         clearTimeout(time)
         time = setTimeout(function () {
             $('#video-controller').addClass('video-hide-controller');
-        }, 3500);
+        }, 1500);
     });
 
     if (window.danmaku != null) {
@@ -443,6 +443,11 @@ if (room_id != null) {
     if (window.location.protocol == "https:") {
         window.location.protocol = "http:";
     } else {
+        var localS = localStorage.LIVE_PLAYER_STATUS;
+        if (localS != null && localS.indexOf('"type":"html5"') != -1) {
+            localStorage.LIVE_PLAYER_STATUS = localS.replace('"type":"html5"', '"type":"flash"');
+            window.location.reload();
+        }
         window.danmaku = new Danmaku();
         window.danmaku_server = null;
         get_live_status(room_id);
